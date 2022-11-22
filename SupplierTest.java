@@ -7,16 +7,15 @@ public class SupplierTest {
 
         System.out.println("TC Projects\n");
 
-        List<String> names = new ArrayList<>();
-        names.add("dm");
-        names.add("konz");
-        names.add("konka");
-        names.add("konmr");
+        List<String> project = new ArrayList<>();
+        project.add("dm");
+        project.add("konz");
+        project.add("konka");
+        project.add("konmr");
+        project.add("vdr");
 
-        //Statement lambda can be replaced with expression lambda
-        names.forEach((item)-> {
-            printProjects(()-> item);
-        });
+        project.forEach((item)->
+            printProjects(()-> item));
     }
 
     private static void printProjects(Supplier<String> supplier) {
