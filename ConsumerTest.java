@@ -1,18 +1,14 @@
-import java.util.Arrays;
-import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 public class ConsumerTest {
     public static void main(String[] args) {
 
-        List<String> tc = Arrays.asList("dm", "konz", "konka", "konmr", "vdr");
-        forEach(tc, projects -> System.out.println(projects));
+
+        Consumer<String> printTCProjects = System.out::println;
+        Stream<String> koProjects = Stream.of("konz", "konka", "konmr");
+        koProjects.forEach(printTCProjects);
 
     }
 
-    static <T> void forEach(List<T> tc, Consumer<T> consumer) {
-        for (T t : tc) {
-            consumer.accept(t);
-        }
-    }
 }
