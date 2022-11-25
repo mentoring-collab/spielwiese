@@ -1,3 +1,5 @@
+package lambdas;
+
 import java.util.Arrays;
 import java.util.function.IntPredicate;
 import java.util.function.Predicate;
