@@ -8,7 +8,7 @@ public class ConsumerTest {
 
 
         Consumer<String> printTCProjects = System.out::println;
-        Stream<String> koProjects = Stream.of("konz", "konka", "konmr");
+        Stream<String> koProjects = Stream.of("konz", "konka", "konmr", "dm");
         koProjects.forEach(printTCProjects);
 
     }
