@@ -16,7 +16,8 @@ public class ConsumerAndThenTest {
                 list.set(1, "Toll Collect");
             }
         };
-        Consumer<List<String>> printConsumer = list -> list.forEach(System.out::println);
+        Consumer<List<String>> printConsumer = list -> list.forEach(x -> System.out.println(x));
+
 
         testConsumer.andThen(printConsumer).accept(projects);
     }
