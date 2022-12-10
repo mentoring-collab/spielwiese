@@ -1,0 +1,66 @@
+== Lambdas
+
+=== Tabelle
+
+:toc:
+[cols=5*]
+|===
+
+|Name |Zweck |Input |Output |Kommentar
+|Predicate
+1+|Test von Variablen, Streams Filter
+1+|1 Eingabeparameter
+1+|Boolean, Ergebnis einer Prüfung
+1+|@FunctionalInterface
+public interface Predicate<T>
+
+|Consumer
+1+|Er stellt einen Operator dar, der einen Eingabeparameter akzeptiert und nichts zurückgibt.
+1+|1 Eingabeparameter
+1+|void accept(T t);
+1+|erlaubt weitere Funktionen z.B. andThen()
+@FunctionalInterface
+public interface Consumer<T>
+
+void accept(T t);
+
+default Consumer<T> andThen(Consumer<? super T> after) {
+
+Objects.requireNonNull(after);
+return (T t) -> { accept(t); after.accept(t); };
+
+|Supplier
+1+|Nimmt kein Argument aber produziert ein Value von Type T
+T (get)
+1+|nichts
+1+|Ergebnis aus dem get()
+1+|kein Default oder static Methode
+
+|Functional
+1+|-
+1+|-
+1+|-
+1+|-
+
+|BiFunction
+1+|-
+1+|-
+1+|-
+1+|-
+
+|Operator
+1+|-
+1+|-
+1+|-
+1+|-
+
+|===
+
+
+
+
+
+
+
+
+

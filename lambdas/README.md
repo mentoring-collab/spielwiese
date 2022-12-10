@@ -1,2 +1,0 @@
-# spielwiese
-Diverse Java Tests
