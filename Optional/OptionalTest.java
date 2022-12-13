@@ -15,7 +15,6 @@ public class OptionalTest {
                 .map(List::size)
                 .orElse(0);
 
-        //assert size <= 5;
 
         if (size <= 5 )
         {
