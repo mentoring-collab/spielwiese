@@ -37,16 +37,25 @@ T (get)
 1+|kein Default oder static Methode
 
 |Functional
-1+|-
-1+|-
-1+|-
-1+|-
+1+|Nimmt eine einzelne Eingabe und kann einen beliebigen Wert zurückgeben
+1+|Eingabeparameter
+1+|Object (result)
+1+|public interface Function<T, R>
+R apply(T t);
+
+compose, andThen und identity
 
 |BiFunction
-1+|-
-1+|-
-1+|-
-1+|-
+1+|Akzeptiert zwei Argumente und erzeugt ein Ergebnis
+1+|2 Argumente
+1+|Ergebnis
+1+|public interface BiFunction<T, U, R>
+R apply(T t, U u);
+
+    default <V> BiFunction<T, U, V> andThen(Function<? super R, ? extends V> after) {
+        Objects.requireNonNull(after);
+        return (T t, U u) -> after.apply(apply(t, u));
+    }
 
 |Operator
 1+|-
