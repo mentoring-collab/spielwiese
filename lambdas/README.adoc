@@ -57,11 +57,15 @@ R apply(T t, U u);
         return (T t, U u) -> after.apply(apply(t, u));
     }
 
-|Operator
-1+|-
-1+|-
-1+|-
-1+|-
+|UnaryOperator
+1+|Es stellt eine Funktion dar, die ein Argument aufnimmt und darauf eingeht.
+1+|Ein Argument
+1+|Das Argument und der Rückgabetyp sind identisch.
+1+|public interface UnaryOperator<T> extends Function<T, T>
+
+static <T> UnaryOperator<T> identity() {
+
+return t -> t;
 
 |===
 
