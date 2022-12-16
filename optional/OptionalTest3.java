@@ -1,4 +1,4 @@
-package Optional;
+package optional;
 
 import java.util.Optional;
 
@@ -9,6 +9,10 @@ public class OptionalTest3 {
 
         Optional<String> empty = Optional.empty();
         System.out.println(empty);
+
+        Optional.ofNullable("Nullable");
+        Optional.of("not nullable");
+
 
         Optional<String> value = Optional.of(str[5]);
 
