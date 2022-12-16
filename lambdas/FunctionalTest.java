@@ -1,13 +1,14 @@
 package lambdas;
 
-import java.util.List;
-import java.util.ListIterator;
 import java.util.function.Function;
+import java.util.function.IntBinaryOperator;
 
 public class FunctionalTest {
 
     public static void main(String[] args){
 
+        IntBinaryOperator sum = (a, b) -> a + b;
+        System.out.println("Result: " + sum.applyAsInt(12, 100));
 
     Function<String, String> capitalize = tc -> tc.toUpperCase();
     Function<String, Integer> length = tc -> tc.length();
